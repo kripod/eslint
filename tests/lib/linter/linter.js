@@ -7090,7 +7090,7 @@ var a = "test2";
                 linter.verify(sourceCode, {}, { filename, preprocess });
 
                 assert.strictEqual(preprocess.calledOnce, true);
-                assert.deepStrictEqual(preprocess.args[0], [code.slice(1), filename]);
+                assert.deepStrictEqual(preprocess.args[0], [code, filename]);
             });
 
             it("should catch preprocess error.", () => {
@@ -16175,7 +16175,7 @@ var a = "test2";
                 linter.verify(sourceCode, configs, { filename, preprocess });
 
                 assert.strictEqual(preprocess.calledOnce, true);
-                assert.deepStrictEqual(preprocess.args[0], [code.slice(1), filename]);
+                assert.deepStrictEqual(preprocess.args[0], [code, filename]);
             });
 
             it("should catch preprocess error.", () => {
